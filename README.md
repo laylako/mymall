@@ -1,4 +1,4 @@
-# supermall
+# vuemall
 
 ## Project setup
 ```

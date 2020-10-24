@@ -1,20 +1,22 @@
 <template>
   <div id="app">
-    青空
+    <main-tab-bar/>
+    <router-view/>
   </div>
+
 </template>
 
 <script>
+  import MainTabBar from "components/content/MainTabBar"
 
-
-export default {
-  name: 'app',
-  components: {
-    
+  export default {
+    name: 'App',
+    components: {
+      MainTabBar
+    }
   }
-}
 </script>
 
 <style>
-
+  @import "assets/css/base.css";
 </style>
