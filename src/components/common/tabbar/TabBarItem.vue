@@ -8,6 +8,7 @@
             <slot name="item-icon-active"/>
         </div>
 
+        <!-- <div :class="{'active':isActive}" :style="activeStyle"> -->
         <div :class="{'active':isActive}">
             <slot name="item-text"/>
         </div>
@@ -18,12 +19,22 @@
     export default {
         name: "TabBarItem",
         props: {
-            path: String
+            path: String // 应该跳转的path
+            // activeColor: {
+            //     type: String,
+            //     default: 'red'
+            // }
         },
         computed: {
             isActive() {
                 return this.$route.path.indexOf(this.path) !== -1
-            }
+            },
+            /** 
+             * 动态传入 activeColor，然后 bind 样式
+             */
+            // activeStyle() {
+            //     return this.isActive ? {color: this.activeColor}:{}
+            // }
         },
         methods: {
             itemClick() {
